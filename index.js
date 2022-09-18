@@ -1,6 +1,9 @@
 // A program that receives and sends messages. Specifically HTTP messages.
 
 const http = require("http");
+const chalk = require("chalk")
+
+
 
 const server = http.createServer();
 
@@ -13,5 +16,5 @@ server.on("request", (request, res) => {
 // The default port when using HTTP is 80 and HTTPS is 443
 const port = 8000;
 server.listen(port, () => {
-  console.log(`listening on port ${port}`);
+  console.log(chalk.green(`listening on port ${port}`));
 });
