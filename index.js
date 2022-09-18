@@ -8,7 +8,16 @@ const server = http.createServer();
 server.on("request", (request, res) => {
   // res.writeHead(200, { "Content-Type": "application/json" });
   if (request.url === "/party") {
-    res.end("You found the party. 🥃🍸🍹");
+    res.setHeader("Content-Type", "text/html")
+    res.writeHead(200);
+    console.log('what')
+
+    res.end(`<style>
+    body {
+      background-color: black;
+      color: white;
+    }
+    </style><html>You found the party. &#127865 &#127866	&#127867 &#127849</html>`);
   } else {
     res.end("Hello World");
   }
