@@ -1,16 +1,17 @@
 // A program that receives and sends messages. Specifically HTTP messages.
 
 const http = require("http");
-const chalk = require("chalk")
-
-
+const chalk = require("chalk");
 
 const server = http.createServer();
 
 server.on("request", (request, res) => {
   // res.writeHead(200, { "Content-Type": "application/json" });
-
-  res.end("Hello World");
+  if (request.url === "/party") {
+    res.end("You found the party.");
+  } else {
+    res.end("Hello World");
+  }
 });
 
 // The default port when using HTTP is 80 and HTTPS is 443
