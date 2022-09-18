@@ -8,7 +8,7 @@ const server = http.createServer();
 server.on("request", (request, res) => {
   // res.writeHead(200, { "Content-Type": "application/json" });
   if (request.url === "/party") {
-    res.end("You found the party.");
+    res.end("You found the party. 🥃🍸🍹");
   } else {
     res.end("Hello World");
   }
