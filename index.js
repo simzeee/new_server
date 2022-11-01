@@ -9,11 +9,12 @@ const app = express();
 const port = 8000;
 
 app.use('/relax', express.static('relax'));
-app.use('/countdown', express.static('countdown'))
-
+app.use('/countdown', express.static('countdown'));
 
 app.get('/', (req, res) => {
-  res.send('Hello World! I am using express.');
+  res.send(`<div><a href="https://www.johnsims.party/relax" target="_blank"> Relax </a></div>
+  <div><a href="https://www.johnsims.party/countdown" target="_blank"> Countdown </a></div>
+  `);
 });
 
 // app.get('/test', (req, res) => {
