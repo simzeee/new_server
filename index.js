@@ -14,6 +14,7 @@ app.use('/countdown', express.static('countdown'));
 app.get('/', (req, res) => {
   res.send(`<div><a href="https://www.johnsims.party/relax" target="_blank"> Relax </a></div>
   <div><a href="https://www.johnsims.party/countdown" target="_blank"> Countdown </a></div>
+  <div><a href="https://www.johnsims.party/piano" target="_blank"> Piano </a></div>
   `);
 });
 
