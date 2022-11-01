@@ -15,8 +15,22 @@ app.get('/', (req, res) => {
   res.send(`<div><a href="https://www.johnsims.party/relax" target="_blank"> Relax </a></div>
   <div><a href="https://www.johnsims.party/countdown" target="_blank"> Countdown </a></div>
   <div><a href="https://www.johnsims.party/piano" target="_blank"> Piano </a></div>
+  <div><a href="https://www.johnsims.party/party" target="_blank"> Party </a></div>
   `);
 });
+
+app.get('/party', (req, res) => {
+  res.setHeader("Content-Type", "text/html")
+      res.writeHead(200);
+      console.log('what')
+  
+      res.end(`<style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      </style><html>You found the party. &#127865 &#127866	&#127867 &#127849</html>`);
+})
 
 // app.get('/test', (req, res) => {
 //   console.log(__dirname)
